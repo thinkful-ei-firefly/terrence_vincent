@@ -55,7 +55,7 @@ console.log(hobbitMeal.meals[3]);
 Create 3 - 5 objects, each with a name and a jobTitle.Use people you know, or characters from fiction, 
 or your own inventions.
 Store these objects in an array.
-Iterate over the array and use console.log to show each person's job title and name.*/
+Iterate over the array and use console.log to show each person's job title and name.
 
 const arrayOfObjects=[
   {name: 'Bob', jobTitle: 'Cook'},
@@ -64,12 +64,12 @@ const arrayOfObjects=[
 ];
 
 for (const key of arrayOfObjects){
-  console.log(`${key.name} is a ${key.jobTitle}`)
+  console.log(`${key.name} is a ${key.jobTitle}`);
 
   
 }
 
-/*5. Properties that aren't there
+5. Properties that aren't there
 Expand on the previous example by adding a boss property to everyone except the owner of the company.
 Change the iteration to print out messages in this format: "${title} ${name} reports to ${boss}.".
  For example: Junior Engineer Bob reports to Fred..
@@ -77,5 +77,25 @@ What gets printed out for the owner?
 Adjust the message so that people with no boss display "${title} ${name} doesn't report to anybody."
  - for example, Founder John doesn't report to anybody.*/
 
- 
+const arrayOfObjects=[
+  {name: 'Bob', jobTitle: 'Cook', boss: 'Joe'},
+  {name: 'Abe', jobTitle: 'Dishwasher', boss: 'Joe'},
+  {name: 'Cat', jobTitle: 'Hostess', boss: 'Joe'},
+  {name: 'Joe', jobTitle: 'Owner', boss: null}
+];
+  
+for (const key of arrayOfObjects){
+  if(key.boss !== null){
+    console.log(`${key.jobTitle} ${key.name} reports to ${key.boss}.`);
+  }
+
+  if(key.boss === null){
+    console.log(`${key.jobTitle} ${key.name} doesn't report to anybody.`);
+  }
+
+
+    
+  
+    
+}
 
