@@ -20,7 +20,7 @@ function createMyObject(){
   };
 }
 
-  console.log(createMyObject()) ; 
+console.log(createMyObject()) ; 
 
 /*Object updater
 Modify the updateObject function (which takes a single argument (obj)) so that it adds the following key / value pairs to obj and returns it:
@@ -36,4 +36,23 @@ function updateObject(obj) {
   obj.bizz = 'bizz';
   obj.bang = 'bang';
   return obj;
+}
+
+/*Self-reference
+Modify personMaker.fullName to be a function that uses self-reference (via this) 
+in order to return the firstName and lastName properties separated by a space.
+
+So, for instance, if firstName was 'Jane' and lastName was 'Doe', fullName() should return 'Jane Doe'.*/
+
+function personMaker() {
+  var person = {
+    firstName: 'Paul',
+    lastName: 'Jones',
+    // replace `null` with a function that uses self reference to return
+    // full name
+    fullName: function(){
+    return this.firstName + ' ' + this.lastName;
+    },
+  };
+  return person;
 }
