@@ -53,3 +53,11 @@ function enrollInSummerSchool(students) {
     course: student.course,
   }),
 }
+
+/*Spend up to 15 minutes writing a function called findById. This function takes 2 arguments, items and idNum. items is an array of objects. idNum is the id we're trying to find in items. 
+The function should look for an item with the id idNum in the array items.
+ If found, it should return that item.*/
+
+ function findById(items,idNum){
+     return items.find(item => item.id === idNum);
+ }
