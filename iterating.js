@@ -64,3 +64,25 @@ The function should look for an item with the id idNum in the array items.
 function findById(items, idNum) {
   return items.find(item => item.id === idNum);
 }
+
+/*Validate object keys
+Spend up to 20 minutes writing a function called validateKeys. 
+This function takes 2 arguments, object and expectedKeys. object is (you guessed it!) 
+an object that we want to validate keys for. expectedKeys is an array of keys that we expect
+ to find on the object.
+
+validateKeys should return true if object has all of the keys from expectedKeys, 
+and no additional keys. It should return false if one or more of the expectedKeys 
+is missing from the object, or if the object contains extra keys not in expectedKeys. */
+
+function validateKeys(object, expectedKeys) {
+  if (Object.keys(object).length !== expectedKeys.length) {
+    return false;
+  }
+  for (let i = 0; i < expectedKeys.length; i++) {
+    if (!Object.keys(object).find(key => key === expectedKeys[i])) {
+      return false;
+    }
+  }
+  return true;
+}
