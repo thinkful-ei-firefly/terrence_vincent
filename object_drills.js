@@ -75,7 +75,7 @@ Change the iteration to print out messages in this format: "${title} ${name} rep
  For example: Junior Engineer Bob reports to Fred..
 What gets printed out for the owner?
 Adjust the message so that people with no boss display "${title} ${name} doesn't report to anybody."
- - for example, Founder John doesn't report to anybody.*/
+ - for example, Founder John doesn't report to anybody.
 
 const arrayOfObjects=[
   {name: 'Bob', jobTitle: 'Cook', boss: 'Joe'},
@@ -97,5 +97,33 @@ for (const key of arrayOfObjects){
     
   
     
+}*/
+
+
+const cypher = {
+  a:1,
+  b:2,
+  c:3,
+  d:4,
+  
+};
+
+function decode(word){
+  let firstChar= word[0];
+  let position= cypher[firstChar];
+  if(position===undefined){
+    return ' ';
+  }
+  return word[position];
+     
 }
 
+function decodeWords(words){
+  // create an array of words
+  return words
+    .split(' ')
+    .map(word => decode(word))
+    .join('');
+}
+
+console.log(decodeWords('craft block argon meter bells brown croon droop'));
