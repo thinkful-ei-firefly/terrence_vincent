@@ -50,3 +50,19 @@ const hobbitMeal = {
 };
 
 console.log(hobbitMeal.meals[3]);
+
+/*Arrays of objects
+Create 3 - 5 objects, each with a name and a jobTitle.Use people you know, or characters from fiction, 
+or your own inventions.
+Store these objects in an array.
+Iterate over the array and use console.log to show each person's job title and name.*/
+
+const arrayOfObjects=[
+  {name: 'Bob', jobTitle: 'Cook'},
+  {name: 'Abe', jobTitle: 'Dishwasher'},
+  {name: 'Cat', jobTitle: 'Hostess'},
+];
+
+for (const key of arrayOfObjects){
+  console.log(`${key.name} is a ${key.jobTitle}`)
+}
